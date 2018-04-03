@@ -27,12 +27,14 @@ Park.prototype.offspringGreaterThan = function (offspring) {
 };
 
 Park.prototype.countDinosAfterYear = function (numYears) {
-  let totalDinos = 0;
+  let dinos = [];
   for (let dino of this.enclosure) {
-    totalDinos += 1;                // This Dinosaur
-    totalDinos += dino.offspring;   // This Dinosaur's offspring
+    dinos.push(dino);                 // This Dinosaur
+    for (let i = 1; i <= dino.offspring; i++){
+      dinos.push(dino);               // This Dinosaur's offspring
+    };
   };
-  return totalDinos;
+  return dinos.length;
 };
 
 module.exports = Park;
