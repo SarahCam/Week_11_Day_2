@@ -18,8 +18,8 @@
 // should be able to remove all dinosaurs of a particular type
 // should get all the dinosaurs with an offspring count of more than 2
 
-var assert = require('assert');
-var Dino = require('../dino.js');
+let assert = require('assert');
+let Dino = require('../dino.js');
 
 
 describe('Dino', function(){
