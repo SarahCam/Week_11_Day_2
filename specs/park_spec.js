@@ -39,9 +39,17 @@ describe('Park', function(){
     park.addDino(dino4);
     assert.strictEqual(park.enclosure.length, 4);
     assert.deepStrictEqual(park.enclosure, [dino1, dino2, dino3, dino4]);
-    park.removeDinosOfType('Velociraptor');
+    park.removeType('Velociraptor');
     assert.strictEqual(park.enclosure.length, 2);
     assert.deepStrictEqual(park.enclosure, [dino2, dino4]);
+  });
+
+  it('should get all the dinosaurs with an offspring count of more than 2', function(){
+    park.addDino(dino1);
+    park.addDino(dino2);
+    park.addDino(dino3);
+    park.addDino(dino4);
+    assert.deepStrictEqual(park.offspringGreaterThan(2), [dino1, dino3]);
   });
 
 });

@@ -6,7 +6,7 @@ Park.prototype.addDino = function (dino) {
   this.enclosure.push(dino);
 };
 
-Park.prototype.removeDinosOfType = function (type) {
+Park.prototype.removeType = function (type) {
   let updatedEnclosure = [];
   for (let dino of this.enclosure) {
     if (dino.type !== type) {
@@ -14,6 +14,16 @@ Park.prototype.removeDinosOfType = function (type) {
     };
   };
   this.enclosure = updatedEnclosure;
+};
+
+Park.prototype.offspringGreaterThan = function (offspring) {
+  let dinos = [];
+  for (let dino of this.enclosure) {
+    if (dino.offspring > 2) {
+      dinos.push(dino);
+    };
+  };
+  return dinos;
 };
 
 module.exports = Park;
