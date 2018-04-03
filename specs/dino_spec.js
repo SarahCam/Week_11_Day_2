@@ -34,4 +34,8 @@ describe('Dino', function(){
     assert.strictEqual(dino.type, 'Velociraptor');
   });
 
+  it('should have a number of offspring per year', function(){
+    assert.strictEqual(dino.offspring, 3);
+  });
+
 });
