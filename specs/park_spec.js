@@ -4,6 +4,20 @@
 // should be able to add dinosaur
 // should be able to remove all dinosaurs of a particular type
 // should get all the dinosaurs with an offspring count of more than 2
+//
+// Extension
+// John Hammond wants to be able to calculate how many dinosaurs there are going to be at
+// Jurassic Park on any given year after opening, taking into consideration the number of
+// offspring each dinosaur has annually.
+//
+// Dinosaurs can spontaneously reproduce by themselves, don't @ me
+// Use TDD to write and make pass the following tests:
+//
+// Park:
+//
+// should be able to calculate number of dinosaurs after year one, starting with 1 dinosaur
+// should be able to calculate number of dinosaurs after year two, starting with 1 dinosaur
+// should be able to calculate number of dinosaurs after year two, starting with 2 dinosaurs
 
 let assert = require('assert');
 let Park = require('../park.js');
@@ -50,6 +64,18 @@ describe('Park', function(){
     park.addDino(dino3);
     park.addDino(dino4);
     assert.deepStrictEqual(park.offspringGreaterThan(2), [dino1, dino3]);
+  });
+
+  it('should be able to calculate number of dinosaurs after year one, starting with 1 dinosaur', function(){
+
+  });
+
+  it('should be able to calculate number of dinosaurs after year two, starting with 1 dinosaur', function(){
+
+  });
+
+  it('should be able to calculate number of dinosaurs after year two, starting with 2 dinosaurs', function(){
+
   });
 
 });
