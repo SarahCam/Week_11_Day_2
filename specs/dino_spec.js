@@ -24,14 +24,14 @@ var Dino = require('../dino.js');
 
 describe('Dino', function(){
 
-  var dino;
+  let dino;
 
   beforeEach(function(){
-    dino = new Dino();
+    dino = new Dino('Velociraptor', 3);
   });
 
   it('should have a type', function(){
-
+    assert.strictEqual(dino.type, 'Velociraptor');
   });
 
 });
