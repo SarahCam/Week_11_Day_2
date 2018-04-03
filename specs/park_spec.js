@@ -6,7 +6,7 @@
 // should get all the dinosaurs with an offspring count of more than 2
 
 let assert = require('assert');
-let Dino = require('../park.js');
+let Park = require('../park.js');
 
 
 describe('Park', function(){
@@ -15,6 +15,10 @@ describe('Park', function(){
 
   beforeEach(function(){
     park = new Park();
+  });
+
+  it('enclosure should start empty', function(){
+
   });
 
 });
